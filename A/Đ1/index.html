@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ôn tập cuối kì</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./public/css/style.css">
+</head>
+<body>
+    <ol class="breadcrumb">
+        <img src="./public/images/logo7.png" alt="">
+        <li>
+            <a href="#">Trang chủ</a>
+        </li>
+        <li>
+            <a href="#">Giới thiệu</a>
+        </li>
+        <li>
+            <a href="#">Dịch vụ</a>
+        </li>
+        <li class="active">
+            <a data-toggle="modal" href='#modal-id'>Ký gửi hàng hóa</a>
+            <div class="modal fade" id="modal-id">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title">Thông tin kiện hàng hóa gửi</h4>
+                        </div>
+                        <div class="modal-body" >
+                           <form class="form-horizontal" action="/action_page.php" >
+                               <div class="form-group">
+                                   <label class="control-label col-sm-4 " style="text-align: revert;font-size: 13px;" for="serial">Số serial:</label>
+                                   <div class="col-sm-8">
+                                       <input type="serial" class="form-control" id="serial" placeholder="OZMO-600">
+                                        <p class="form-message danger">Số serial in trên kiện hàng nếu có</p>
+                                   </div>
+                               </div>
+                                <div class="form-group">
+                                    <label class="control-label col-sm-4" style="text-align: revert;font-size: 13px;" for="mota">Mô tả kiện hàng:</label>
+                                  <div class="col-sm-8">
+                                    <input type="mota" class="form-control" id="mota" placeholder="Robot Hút Bụi Lau Nhà Dreame D9 Pro">
+                                    <p class="form-message danger">*</p>
+                                  </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-sm-4" style="text-align: revert;font-size: 13px;"  for="my-image">Hình ảnh:</label>
+                                    <div class="col-sm-8">
+                                        <input id="image-upload" type="file"/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-sm-4" style="text-align: revert;font-size: 13px;" for="trongluong">Trọng lượng (kg):</label>
+                                    <div class="col-sm-8">
+                                        <input type="trongluong" class="form-control" id="trongluong" placeholder="3.5">
+                                        <p class="form-message danger">*</p>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-sm-4" style="text-align: revert;font-size: 13px;" for="chiphi">Chi phí vận chuyển (VND):</label>
+                                    <div class="col-sm-8">
+                                        <input type="chiphi" class="form-control" id="chiphi" placeholder="192500">
+                                    </div>
+                                </div>
+                                <button type="button" id="btnCheck" class="btn btn-primary">Xác nhận</button>
+                            </form>                         
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>    
+        <li>
+            <a href="#">Liên hệ</a>
+        </li>
+    </ol>
+    <div class="container-fluid row">
+        <div class="col-sm-9" style="border: 1px solid black;">
+            <div>Form</div>
+        </div>
+        <div class="col-sm-3" style="border: 1px solid black;">
+            <h5>Qui định thanh toán</h5>
+            <ul>
+                <li>Khách cọc từ 70% - 100% số tiền của đơn hàng</li>
+                <li>Hàng về sau 24-48 tiếng kể từ khi kho Trung Quốc ký nhận</li>
+                <li>Shop sẽ thanh lý đơn hàng nêu sau 1 tuần khách hàng không thanh toán tiền nhận hàng</li>
+            </ul>
+        </div>
+    </div>
+    <table class="table table-bordered table-hover">
+        <h4 style="color:blue">Danh sách kiện hàng hóa gửi</h4>
+        <thead>
+            <tr>
+                <th>STT</th>
+                <th>Số serial</th>
+                <th>Mô tả kiện hàng</th>
+                <th>Hình ảnh</th>
+                <th>Trọng lượng (kg)</th>
+                <th>Phí vận chuyển (VND)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>OZMO-600</td>
+                <td>Robot Hút Bụi Lau Nhà Dreame D9 Pro</td>
+                <td>..\image\Pro9.PNG</td>
+                <td>3.5</td>
+                <td>122500</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="container-fluid row" style="background-color: rgb(225, 172, 0);">
+        <div class="text" style="color: rgb(37, 37, 235);">Mã số: 21000425 - Họ tên: Cao văn Bảo</div>
+    </div>
+    <script src="./public/js/script.js"></script>
+</body>
+</html>
